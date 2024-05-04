@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #0078ff;
+    --white-color: #fff;
+    --dark-color: #222;
+}
+.transition {
+    transition: 0.3s ease-in;
+}
+section, article {
+    padding: 5rem 0;
+}
+body {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 100%;
+}
+/* ========== Navbar ========== */
+#header .active::after, #header .menu-hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem;
+    width: 60%;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: 0.3s ease-in;
+    border: none;
+    margin: 0;
+}
+#header .menu-hover {
+    position: relative;
+}
+#header .menu-hover::after {
+    width: 0;
+}
+#header .menu-hover:hover:after {
+    width: calc(80% - 1rem);
+}
+#header .nav-link {
+    color: var(--white-color);
+}
+#header .dropdown:hover .dropdown-menu {
+    display: block;
+}
+#header .deep-dropdown__menu {
+    display: none;
+}
+.deep-dropdown__menu li a {
+    color: var(--dark-color);
+}
+#header .dropdown-menu li:hover .deep-dropdown, #header .deep-dropdown__menu li:hover a {
+    color: var(--primary-color);
+}
+#header .dropdown-menu .deep-dropdown:hover .deep-dropdown__menu {
+    display: block;
+}
+#header .deep-dropdown__menu {
+    transform: translateX(-100%);
+}
+/* ========== Hero Section ========== */
+#hero {
+    background-image: url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#hero .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#hero .hero-content__title {
+    font-size: 4rem;
+}
+/* ========== About Section ========== */
+#about .w-85 {
+    width: 85%;
+}
+#about .w-90 {
+    width: 90%;
+}
+.underline-title {
+    width: fit-content;
+}
+.underline-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+/* Services */
+#services .icon {
+    width: 100px;
+    height: 100px;
+    border: 8px solid var(--primary-color);
+}
+#services .card:hover .icon {
+    border-color: #b7d7fc;
+}
+#services .icon i {
+    width: 85px;
+    height: 85px;
+    background-color: var(--white-color);
+}
+#services .card:hover .icon i {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.title p {
+    width: fit-content;
+}
+.title p::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    right: 50%;
+    width: 20%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: translateX(50%);
+}
+/* Numbers */
+#numbres, #testimonial, #form {
+    background-image: url('../assets/images/post-3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+.bg-overlay {
+    background-color: rgba(0, 119, 255, 0.7);
+}
+.icon {
+    border: 8px solid #9ec5f1;
+    width: 80px;
+    height: 80px;
+}
+/* Portfolio */
+#portfolio .card {
+    cursor: pointer;
+}
+#portfolio .card p {
+    color: rgba(34, 34, 34, 0.8);
+    font-size: 0.8rem;
+}
+#portfolio .card p span, #portfolio .card .right i {
+    color: var(--primary-color);
+}
+#portfolio .card .right {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--primary-color);
+}
+#portfolio .card:hover .card-img-top {
+    transform: scale(1.2);
+}
+/* Testimonial */
+#testimonial {
+    background-image: url('../assets/images/overlay-bg.jpg');
+    height: 60vh;
+}
+#testimonial .carousel-indicators {
+    position: static;
+}
+.carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+}
+/* Blog */
+article .card-img-top {
+    cursor: pointer;
+}
+article .card-body a:hover {
+    color: var(--primary-color);
+}
+article .card-body .floating-text {
+    left: 50%;
+}
+/* Form */
+#contact {
+    background-image: url('../assets/images/overlay-bg.jpg');
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.1);
+}
+#contact .social .icon {
+    border: 5px solid var(--primary-color);
+    width: 50px;
+    height: 50px;
+}
+#contact .social .icon i {
+    color: var(--primary-color);
+}
+/* footer */
+footer {
+    background-color: #0062d3;
+}
+.float-btn {
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 50px;
+}
+.typed-cursor {
+    color: var(--white-color);
+    font-size: 2rem;
+}

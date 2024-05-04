@@ -1,0 +1,23 @@
+@media (max-width: 992px) {
+    #header .navbar-nav{
+        background-color: var(--white-color);
+    }
+    #header .navbar-nav a{
+        color: var(--dark-color);
+        padding: 1rem;
+    }
+    #header .active::after, #header .menu-hover::after {
+        width: 0;
+        left: 0 ;
+    }
+    #header .menu-hover:hover:after, #header .active:hover:after {
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+    #header .menu-hover:hover, #header .active:hover{
+        color: var(--primary-color);
+    }
+    #header .menu-hover:hover, #header .active:hover {
+        background-color: rgba(0, 119, 255, 0.05);
+    }
+}
